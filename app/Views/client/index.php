@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +8,7 @@
         content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="">    
     <base href="<?= base_url()?>">
     <link rel="icon" href="#">
     <title>TH Team</title>
@@ -57,7 +56,7 @@
 
     <!--header starts-->
     <?=$header?>
-
+<!-- ?php include("header.php");  ? -->
     <!-- banner part starts -->
     <section class="how-it-works">
         <div class="container">
@@ -127,15 +126,18 @@
             </div>
         </div>
     </section>
-   <?=$footer?>
+   
     <section class="popular">
-       
+        <div class="container">
+            
+        </div>
     </section>
     <!-- Popular block ends -->
     <!-- How it works block starts -->
     
-
-  
+        <?=$footer?>
+    
+    <!-- ?php include 'footer.php' ? -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <script src="js/jquery.min.js"></script>
@@ -147,7 +149,9 @@
     <script src="js/headroom.js"></script>
     <script src="js/foodpicky.min.js"></script>
     <script>
-   
+    function alertCurrentTable() {
+        alert('Bạn đang ngồi tại <?php echo isset($current_table) ? $current_table['title'] : ''; ?>. Vui lòng sử dụng nút "Đổi bàn" trên thanh điều hướng nếu muốn đổi bàn khác.');
+    }
     </script>
 </body>
 
